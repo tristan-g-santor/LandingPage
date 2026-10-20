@@ -1,368 +1,308 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<title>Tristan's Landing Page</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Tristan Santor</title>
+		<meta name="description" content="Tristan Santor — Computer Science &amp; Software Engineering student at UW Bothell. full-stack development and cybersecurity." />
+		<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/souls.css" />
 	</head>
-	<body class="is-preload">
+	<body class="is-title">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<!-- Embers -->
+		<canvas id="embers" aria-hidden="true"></canvas>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Tristan Santor</h1>
-								<p> An aspiring software engineer with a strong passion in focuses such as cybersecurity and AI<br>I am driven by a deep curiosity for understanding how technology interacts with society today
-									<br> I take pride in creating projects that explore complex questions while providing innovative solutions.
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#portfolio">Portfolio</a></li>
-								<li><a href="#links">Links</a></li>
-								<li><a href="#resume">Resume</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+		<!-- Scene: stone wall, glow, bonfire -->
+		<div class="scene" aria-hidden="true">
+			<div class="wall"></div>
+			<div class="glow"></div>
+			<div class="bonfire" id="bonfire">
+				<svg class="sword" viewBox="0 0 60 230">
+					<defs>
+						<linearGradient id="blade" x1="0" x2="1">
+							<stop offset="0" stop-color="#1b1714" />
+							<stop offset=".55" stop-color="#3a322b" />
+							<stop offset="1" stop-color="#b8541c" />
+						</linearGradient>
+					</defs>
+					<circle cx="30" cy="7" r="5" fill="#2a231d" />
+					<rect x="27" y="11" width="6" height="22" fill="#231c17" />
+					<rect x="13" y="32" width="34" height="5" rx="1" fill="#2e2620" />
+					<path d="M25 37 L35 37 L34 215 L30 228 L26 215 Z" fill="url(#blade)" />
+					<g fill="none" stroke="#120e0b" stroke-width="2.4" stroke-linecap="round">
+						<path d="M21 60 Q30 50 39 63" /><path d="M21 80 Q30 70 39 83" />
+						<path d="M21 100 Q30 90 39 103" /><path d="M21 120 Q30 110 39 123" />
+						<path d="M21 140 Q30 130 39 143" /><path d="M21 160 Q30 150 39 163" />
+						<path d="M21 180 Q30 170 39 183" />
+					</g>
+				</svg>
+				<div class="flames" id="flames">
+					<i class="f1"></i><i class="f2"></i><i class="f3"></i><i class="f4"></i><i class="f5"></i>
+				</div>
+				<div class="ash"></div>
+			</div>
+			<!-- Dark knight, left of the fire -->
+			<svg class="knight is-left" viewBox="0 0 200 400">
+				<defs>
+					<linearGradient id="rim-l" x1="0" x2="1">
+						<stop offset=".45" stop-color="#ff7a1c" stop-opacity="0" />
+						<stop offset=".8" stop-color="#ff7a1c" stop-opacity=".35" />
+						<stop offset="1" stop-color="#ffb060" stop-opacity=".8" />
+					</linearGradient>
+					<filter id="solid-l"><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /></filter>
+					<mask id="mask-l"><use href="#body-l" filter="url(#solid-l)" /></mask>
+				</defs>
+				<ellipse cx="100" cy="392" rx="62" ry="6" fill="#000" opacity=".55" />
+				<g id="body-l">
+					<!-- crossbow hanging from the off hand -->
+					<path d="M72 196 L22 176 M30 168 Q18 176 26 190" fill="none" stroke="#1c1714" stroke-width="5" stroke-linecap="round" />
+					<!-- tattered robe -->
+					<path d="M70 192 L130 192 Q150 260 160 300 L150 330 L156 360 L146 392 L132 380 L120 394 L104 384 L90 394 L78 380 L64 392 L58 360 L44 344 L54 320 Q60 250 70 192 Z" fill="#16141a" />
+					<path d="M86 200 L114 200 L118 384 L106 376 L96 388 L84 378 Z" fill="#211f27" />
+					<path d="M92 214 Q100 240 92 270 Q100 300 92 330 M108 214 Q100 240 108 270 Q100 300 108 330" fill="none" stroke="#3d3a45" stroke-width="1.5" />
+					<!-- torso and plate -->
+					<path d="M70 120 L132 120 L128 196 L72 196 Z" fill="#201f27" />
+					<path d="M80 128 L122 128 L118 176 L100 184 L82 176 Z" fill="#2c2b34" stroke="#5f5d68" stroke-width="1.2" />
+					<path d="M110 196 L140 196 L138 244 L112 238 Z" fill="#2a2931" stroke="#5f5d68" stroke-width="1" />
+					<rect x="70" y="188" width="62" height="9" fill="#34323b" />
+					<!-- pauldrons -->
+					<path d="M54 140 L58 120 L64 134 L66 114 L74 130" fill="none" stroke="#1a181e" stroke-width="3" />
+					<ellipse cx="72" cy="128" rx="18" ry="12" fill="#2a2931" stroke="#5d5c66" stroke-width="1.2" />
+					<ellipse cx="130" cy="128" rx="20" ry="13" fill="#2a2931" stroke="#5d5c66" stroke-width="1.2" />
+					<!-- helm -->
+					<path d="M102 66 L105 54 L108 68" fill="#2b2a31" />
+					<path d="M86 104 Q84 74 102 66 Q118 74 116 104 Q100 112 86 104 Z" fill="#2b2a31" />
+					<path d="M88 88 Q101 84 114 88 L114 93 Q101 89 88 93 Z" fill="#7a7882" />
+					<path d="M101 95 L101 106" stroke="#121116" stroke-width="2" />
+					<!-- greatsword over the shoulder -->
+					<path d="M82 137 L95 143 L134 42 L129 36 Z" fill="#4b4a52" />
+					<path d="M88 140 L131 39" stroke="#8a8893" stroke-width="1.2" />
+					<path d="M73 134 L103 146" stroke="#2a2620" stroke-width="5" stroke-linecap="round" />
+					<path d="M88 140 L79 162" stroke="#1c1814" stroke-width="5" stroke-linecap="round" />
+					<!-- arms and hands -->
+					<path d="M64 136 Q62 156 80 158" fill="none" stroke="#24232b" stroke-width="13" stroke-linecap="round" />
+					<path d="M132 136 Q124 160 92 150" fill="none" stroke="#24232b" stroke-width="13" stroke-linecap="round" />
+					<path d="M112 148 L106 160" stroke="#6b6a73" stroke-width="3" />
+					<circle cx="88" cy="148" r="6" fill="#18171c" />
+					<circle cx="80" cy="158" r="6" fill="#18171c" />
+				</g>
+				<rect class="rim" width="200" height="400" fill="url(#rim-l)" mask="url(#mask-l)" />
+			</svg>
 
-				<!-- Main -->
-					<div id="main">
+			<!-- Faraam knight, right of the fire -->
+			<svg class="knight is-right" viewBox="0 0 200 400">
+				<defs>
+					<linearGradient id="rim-r" x1="0" x2="1">
+						<stop offset="0" stop-color="#ffb060" stop-opacity=".8" />
+						<stop offset=".2" stop-color="#ff7a1c" stop-opacity=".35" />
+						<stop offset=".55" stop-color="#ff7a1c" stop-opacity="0" />
+					</linearGradient>
+					<filter id="solid-r"><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" /></filter>
+					<mask id="mask-r"><use href="#body-r" filter="url(#solid-r)" /></mask>
+				</defs>
+				<ellipse cx="100" cy="392" rx="58" ry="6" fill="#000" opacity=".55" />
+				<g id="body-r">
+					<!-- long skirt with pale front panel -->
+					<path d="M72 212 L128 212 L150 386 L52 386 Z" fill="#262b31" />
+					<path d="M88 220 L112 220 L122 386 L80 386 Z" fill="#8a8273" />
+					<path d="M86 220 L77 386 M114 220 L125 386" stroke="#6e5a3a" stroke-width="3" />
+					<path d="M138 300 L162 370" stroke="#1a1714" stroke-width="2" />
+					<ellipse cx="84" cy="389" rx="12" ry="5" fill="#1a1512" />
+					<ellipse cx="118" cy="389" rx="12" ry="5" fill="#1a1512" />
+					<!-- torso and belt -->
+					<path d="M70 128 L130 128 L124 214 L76 214 Z" fill="#3a352f" />
+					<rect x="72" y="204" width="56" height="12" fill="#4a3b2a" />
+					<circle cx="100" cy="210" r="3" fill="#a08a52" />
+					<!-- white hood and fur mantle -->
+					<path d="M82 120 Q100 130 120 116 L124 134 L78 134 Z" fill="#b5ad9c" />
+					<path d="M66 128 Q100 108 136 122 Q150 150 146 182 L140 176 L136 188 L130 176 L124 186 L118 172 Q100 160 84 150 Q72 146 66 128 Z" fill="#b9b1a0" />
+					<!-- brass helm -->
+					<path d="M88 112 Q86 84 100 76 Q114 84 112 112 Q100 118 88 112 Z" fill="#9c8650" />
+					<path d="M100 76 L100 114" stroke="#6b5a32" stroke-width="2" />
+					<path d="M91 96 L109 96" stroke="#1d1810" stroke-width="2.5" />
+					<!-- greatsword raised over the shoulder -->
+					<path d="M77 165 L88 171 L172 20 L170 6 Z" fill="#5a6f73" />
+					<path d="M82 168 L170 10" stroke="#9fb4b5" stroke-width="1" />
+					<path d="M70 161 L94 175" stroke="#2a2620" stroke-width="5" stroke-linecap="round" />
+					<path d="M82 168 L68 192" stroke="#1e1a16" stroke-width="5" stroke-linecap="round" />
+					<circle cx="67" cy="194" r="4" fill="#5c5a3a" />
+					<!-- arms with bronze bracers -->
+					<path d="M72 138 Q62 164 74 184" fill="none" stroke="#3a352f" stroke-width="13" stroke-linecap="round" />
+					<path d="M128 145 Q112 176 84 172" fill="none" stroke="#3a352f" stroke-width="13" stroke-linecap="round" />
+					<path d="M66 168 L80 170 M104 166 L108 178" stroke="#6f6a3e" stroke-width="5" />
+					<circle cx="80" cy="172" r="6" fill="#4a4a2e" />
+					<circle cx="73" cy="186" r="6" fill="#4a4a2e" />
+				</g>
+				<rect class="rim" width="200" height="400" fill="url(#rim-r)" mask="url(#mask-r)" />
+			</svg>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/abouttan.jpg" alt="" /></span>
-								<p>Hi there,
-									My name is Tristan Santor, and I’m currently a Computer Science and Software Engineering student at the University of Washington Bothell..</p>
-								<p>I have a deep passion for technology, driven by my curiosity about how different systems interact and how simple lines of code can have a significant impact. My main interests lie in AI and full-stack development, as well as cybersecurity. I have experience working with C++, Java, and Python, and I’m currently learning the Qt framework to develop exciting applications in the future.
-									<p>Outside my software interests, I served as Activities Chair for FASA Sa UWB an active player at the UW Mens Volleyball Club in Seattle. </p>
-									
-						
-								</article>
+			<div class="vignette"></div>
+		</div>
 
-						<!-- Portfolio -->
-							<article id="portfolio">
-								<h2 class="major">My Project Portfolio</h2>
+		<!-- Title screen -->
+		<section class="title-screen" id="title">
+			<h1 class="title-name">Tristan Santor</h1>
+			<p class="title-sub">Software Engineer &middot; University of Washington</p>
+			<button class="press-any" id="start" type="button">Press any button</button>
+			<p class="title-foot">&copy; 2026 Tristan Santor</p>
+		</section>
 
-								<!--Project 1-->
-								<section>
-								<span class="image main"><img src="images/saasflashcard.png" alt="" /></span>
-								<p>Using effective study tools is very important especially in college. The idea to develop an AI-powered flashcard platform would assist the problem by creating ways to learn content in your classes. By building a functional website, leveraging APIs like Stripe for monetization and Clerk for user authentication, the platform ensures a smooth user experience. Firebase is utilized for secure data storage, 
-									while Groq AI plays a pivotal role in generating dynamic flashcard topics, making AI integration the most critical feature of the project.
-									<a>Check it out here: </a> <a href="https://github.com/tantanishot/flash-trivia-intgroq" target="_blank">SaaS AI Flashcard Trivia</a>
+		<!-- Bonfire lit banner -->
+		<div class="banner" id="banner" aria-hidden="true"><span>Bonfire Lit</span></div>
 
-								</p>
-								</section>
+		<!-- HUD -->
+		<div class="hud" aria-hidden="true">
+			<div class="level"><span id="level">1</span></div>
+			<div class="bars">
+				<div class="bar hp"><i></i></div>
+				<div class="bar stam"><i id="stamina"></i></div>
+			</div>
+		</div>
 
-								<!--Project 2-->
-								<section>
-								<span class="image main"><img src="images/ratemyprofessorai.PNG" alt="" /></span>
-								<p>Many students in college face the worry of finding professors that fit their preferences, many spend hours researching the best professor they prefer in order to succeed in that class. 
-									To address this, our team of three developed an AI-powered chatbot using OpenRouter (similar to OpenAI). 
-									By leveraging Retrieval-Augmented Generation (RAG) and integrating Pinecone API, we enabled the AI to access and deliver more accurate, relevant information. Additionally, we used web scraping with Puppeteer to extract HTML data and convert it into a structured JSON format, 
-									allowing the AI to efficiently generate detailed, organized insights about specific professors.
-								</p>
-							</section>
-   							<!--Project 3-->
-								<section>
-								<span class="image main"><img src="images/pantrytrack.PNG" alt="" /></span>
-								<p>A simple item tracker with a search bar that filters specific items, featuring quick functions like adding and removing items. These features are ideal for inventory management applications. The front-end is designed using Material-UI, while data is stored and managed through Firebase. </p>
-								</section>
-							</article>
+		<main class="hub">
 
-					
-							
+			<!-- Warp menu -->
+			<nav class="panel menu" aria-label="Sections">
+				<div class="panel-inner">
+					<span class="caret" aria-hidden="true">&#x2c4;</span>
+					<ul id="menu">
+						<li><button type="button" data-target="about"><span class="loc">Firelink Shrine</span><span class="tag">About</span></button></li>
+						<li><button type="button" data-target="projects"><span class="loc">Anor Londo</span><span class="tag">Projects</span></button></li>
+						<li><button type="button" data-target="links"><span class="loc">Darkroot Garden</span><span class="tag">Links</span></button></li>
+						<li><button type="button" data-target="resume"><span class="loc">Duke's Archives</span><span class="tag">Resume</span></button></li>
+						<li><button type="button" data-action="leave"><span class="loc">Leave Bonfire</span><span class="tag">Title</span></button></li>
+						<li class="empty" aria-hidden="true"></li>
+						<li class="empty" aria-hidden="true"></li>
+					</ul>
+					<span class="caret" aria-hidden="true">&#x2c5;</span>
+				</div>
+			</nav>
 
-						<!-- Links -->
-							<article id="links">
-								<h2 class="major">Links</h2>
-								<a href="https://www.linkedin.com/in/tristan-santor-813450269/" target="_blank">LinkedIn</a>
-								<br>
-								<br>
-								<a href="https://github.com/tantanishot" target="_blank">Github</a>
-							</article>
-
-						<!-- Resume -->
-						<article id="resume">
-							<h2 class="">Resume</h2>
-							<a href="images/Resume Job 2024 TS.pdf" target="_blank" class="button primary">View Resume In New Tab</a>
-						</article>
-
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; 2024 |Tristan Santor|  <a href="images/Resume Job 2024 TS.pdf">Resume</a>.</p>
-					</footer>
-
+			<div class="controls" aria-hidden="true">
+				<span><b class="dpad"></b>:Select</span>
+				<span><b class="btn cross">&#x2715;</b>:Enter</span>
+				<span><b class="btn circle"></b>:Close</span>
 			</div>
 
-		<!-- BG -->
-			<div id="bg"></div>
+			<button class="estus" id="estus" type="button" title="Drink"><span class="count" id="estus-count">10</span> Estus Flask+2</button>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<a class="souls" href="mailto:tristan.gabriel.santor@gmail.com">tristan.gabriel.santor@gmail.com</a>
 
+			<!-- About -->
+			<article class="panel window" id="about" hidden aria-labelledby="about-title">
+				<header class="window-head">
+					<h2 id="about-title">Status</h2>
+					<button class="close" type="button"><b class="btn circle"></b>Close</button>
+				</header>
+				<div class="status">
+					<figure class="portrait">
+						<img src="images/abouttan.jpg" alt="Tristan Santor" />
+						<figcaption>Tristan Santor</figcaption>
+					</figure>
+					<div>
+						<dl class="stats">
+							<div><dt>Class</dt><dd>Computer Science Graduate</dd></div>
+							<div><dt>Origin</dt><dd>University of Washington Bothell</dd></div>
+							<div><dt>Study</dt><dd>Computer Science &amp; Software Engineering + IAC</dd></div>
+							<div><dt>Leadership</dt><dd>FASA Sa UWB &mdash; Activities Chair</dd></div>
+							<div><dt></dt><dd>UW Men's Volleyball Club, Seattle</dd></div>
+						</dl>
+						<h3 class="sub">Attunement</h3>
+						<ul class="runes">
+							<li>C++</li><li>Java</li><li>Python</li><li>Playwright</li><li>Full-Stack</li><li>Cybersecurity</li>
+						</ul>
+					</div>
+				</div>
+				<div class="lore">
+					<p>Hi there, my name is Tristan Santor, and I'm a new graduateComputer Science and Software Engineering student at the University of Washington Bothell.</p>
+					<p>I have a deep passion for technology, driven by my curiosity about how different systems interact and how simple lines of code can have a significant impact. My main interests lie in AI and full-stack development, as well as cybersecurity. I have experience working with C++, Java, and Python, and I'm currently learning the Qt framework to develop exciting applications in the future.</p>
+					<p>Outside my software interests, I served as Activities Chair for FASA Sa UWB and played club volleybal at the UW Mens Club Team for 3 Years!.</p>
+				</div>
+			</article>
+
+			<!-- Projects -->
+			<article class="panel window" id="projects" hidden aria-labelledby="projects-title">
+				<header class="window-head">
+					<h2 id="projects-title">Inventory</h2>
+					<button class="close" type="button"><b class="btn circle"></b>Close</button>
+				</header>
+				<div class="inventory">
+					<div class="slots" role="tablist" aria-label="Projects">
+						<button class="slot is-selected" type="button" role="tab" aria-selected="true" aria-controls="item-privacy" data-item="item-privacy"><img src="images/privacygrader.png" alt="" style="object-position: left" /><span>Privacy Grader</span></button>
+						<button class="slot" type="button" role="tab" aria-selected="false" aria-controls="item-professor" data-item="item-professor"><img src="images/ratemyprofessorai.PNG" alt="" /><span>Professor AI</span></button>
+						<button class="slot" type="button" role="tab" aria-selected="false" aria-controls="item-plantable" data-item="item-plantable"><img src="images/plantable.png" alt="" style="object-position: center 20%" /><span>Plantable</span></button>
+					</div>
+
+					<section class="item-detail" id="item-privacy" role="tabpanel">
+						<h3>Website Privacy Grader</h3>
+						<p class="item-type">Catalyst &middot; Capstone &middot; Privacy &amp; Security</p>
+						<img src="images/privacygrader.png" alt="Privacy Grader results for a login page: grade F, privacy score 23 out of 100, high overall risk" />
+						<p class="item-lore">A tool that scans any website and grades its privacy and security practices, built from scratch as a full capstone project: a Python/Playwright backend, FastAPI, a React frontend, and a custom risk-scoring algorithm backed by real-world tracker intelligence data.</p>
+						<p class="item-lore">Enter a URL and the tool launches a real headless browser to observe exactly what the site does, which third-party companies it contacts, what cookies it sets and how securely, which browser security headers it enforces, and what TLS configuration it uses. It then produces a letter grade (A&ndash;F) and a numeric privacy score, backed by a transparent, documented scoring methodology.</p>
+						<ul class="effects"><li>Python</li><li>Playwright</li><li>FastAPI</li><li>React</li><li>Risk Scoring</li></ul>
+					</section>
+
+					<section class="item-detail" id="item-professor" role="tabpanel" hidden>
+						<h3>Rate My Professor AI</h3>
+						<p class="item-type">Talisman &middot; RAG Chatbot &middot; Team of three</p>
+						<img src="images/ratemyprofessorai.PNG" alt="Screenshot of the Rate My Professor AI chatbot" />
+						<p class="item-lore">Many college students spend hours researching which professor best fits how they learn. Our team of three built an AI-powered chatbot using OpenRouter. With Retrieval-Augmented Generation (RAG) and the Pinecone API, the AI delivers more accurate, relevant information. We used Puppeteer to scrape HTML and convert it into structured JSON, letting the AI generate detailed, organized insights about specific professors.</p>
+						<ul class="effects"><li>OpenRouter</li><li>RAG</li><li>Pinecone</li><li>Puppeteer</li></ul>
+					</section>
+
+					<section class="item-detail" id="item-plantable" role="tabpanel" hidden>
+						<h3>Plantable</h3>
+						<p class="item-type">Seed &middot; Hackathon &middot; Health &amp; Gardening</p>
+						<div class="shots">
+							<img src="images/plantable.png" alt="Plantable sign-up form asking for name, state, climate and time commitment" />
+							<img src="images/plantable-stack.png" alt="Plantable tech stack: React and Bootstrap with Express and Node on the frontend, Flask and Python on the backend, and a custom crop database" />
+						</div>
+						<p class="item-lore">We all want to eat healthier, but fresh produce can be expensive, hard to find, or confusing to pick out at the store. Plantable makes it simple by helping people grow their own food, tailored to their needs and local environment.</p>
+						<p class="item-lore">Users enter their region, climate and time commitment, and Plantable generates a list of crops that thrive where they live &mdash; with growing instructions, nutritional benefits and easy recipes. We built it on a custom crop database enriched with climate, nutrition and growth data, with our biology major leading the health content and user experience.</p>
+						<p class="item-lore">The hardest part was pairing scientific accuracy with a design that works for people who have never gardened. Next up: a seasonal planting calendar, small-space garden planning for balconies and windowsills, a community forum, dietary filters, and a mobile app.</p>
+						<ul class="effects"><li>React</li><li>Bootstrap</li><li>Node.js</li><li>Express.js</li><li>Flask</li><li>Python</li></ul>
+					</section>
+				</div>
+			</article>
+
+			<!-- Links -->
+			<article class="panel window" id="links" hidden aria-labelledby="links-title">
+				<header class="window-head">
+					<h2 id="links-title">Summon Signs</h2>
+					<button class="close" type="button"><b class="btn circle"></b>Close</button>
+				</header>
+				<p class="hint">Golden signs glow on the ground. Touch one to summon Tristan to your world.</p>
+				<div class="signs">
+					<a class="sign" href="https://www.linkedin.com/in/tristan-santor-813450269/" target="_blank" rel="noopener">
+						<span class="sigil" aria-hidden="true"></span>
+						<span class="sign-name">LinkedIn</span>
+						<span class="sign-msg">Summon for professional cooperation</span>
+					</a>
+					<a class="sign" href="https://github.com/tristan-g-santor" target="_blank" rel="noopener">
+						<span class="sigil" aria-hidden="true"></span>
+						<span class="sign-name">GitHub</span>
+						<span class="sign-msg">Summon to inspect the code</span>
+					</a>
+				</div>
+			</article>
+
+			<!-- Resume -->
+			<article class="panel window" id="resume" hidden aria-labelledby="resume-title">
+				<header class="window-head">
+					<h2 id="resume-title">Ancient Scroll</h2>
+					<button class="close" type="button"><b class="btn circle"></b>Close</button>
+				</header>
+				<p class="hint">A scroll recording the deeds of Tristan Santor. Its knowledge may be learned by any who read it.</p>
+				<a class="action" href="images/tristansresume2026cssph.pdf" target="_blank" rel="noopener">Read the scroll in a new tab</a>
+				<iframe class="scroll" src="images/tristansresume2026cssph.pdf" title="My Resume"></iframe>
+			</article>
+
+		</main>
+
+		<script src="assets/js/souls.js"></script>
 	</body>
 </html>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+	<defs>
+		<radialGradient id="fire" cx=".5" cy="1" r=".9">
+			<stop offset="0" stop-color="#ff7a18" stop-opacity=".9" />
+			<stop offset=".45" stop-color="#7a2a0e" stop-opacity=".6" />
+			<stop offset="1" stop-color="#050403" stop-opacity="0" />
+		</radialGradient>
+		<linearGradient id="brass" x1="0" x2="1">
+			<stop offset="0" stop-color="#e0b56a" />
+			<stop offset=".45" stop-color="#9c8650" />
+			<stop offset="1" stop-color="#4e3f22" />
+		</linearGradient>
+		<clipPath id="tile"><rect width="64" height="64" rx="12" /></clipPath>
+	</defs>
+	<g clip-path="url(#tile)">
+		<rect width="64" height="64" fill="#0d0a08" />
+		<rect width="64" height="64" fill="url(#fire)" />
+		<g transform="translate(32 34) scale(1.3) translate(-100 -96)">
+			<!-- white hood -->
+			<path d="M82 120 Q100 130 120 116 L126 140 L74 140 Z" fill="#b9b1a0" />
+			<!-- brass helm -->
+			<path d="M88 112 Q86 84 100 76 Q114 84 112 112 Q100 118 88 112 Z" fill="url(#brass)" stroke="#2a2014" stroke-width=".8" />
+			<path d="M100 76 L100 114" stroke="#5e4e2a" stroke-width="1.6" />
+			<path d="M90.5 96 L109.5 96" stroke="#1d1810" stroke-width="2.6" stroke-linecap="round" />
+		</g>
+	</g>
+</svg>
